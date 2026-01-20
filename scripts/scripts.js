@@ -276,6 +276,11 @@ export function decorateMain(main) {
   decorateBlocks(main);
   decorateDMImages(main);
   decorateDefaultBlock(main);
+
+  //hide default loading of sidekick
+  if(document.querySelector('aem-sidekick') && document.querySelector('aem-sidekick').hasAttribute('open')){
+    document.querySelector('aem-sidekick').setAttribute('open', false);
+  }
 }
 
 
